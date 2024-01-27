@@ -1,0 +1,274 @@
+.about-layout {
+  background: #222a35;
+  color: #fff;
+  min-height: 100vh;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 10px 250px;
+}
+
+.image-section,
+.text-section,
+.profile-section,
+.skills-section {
+  flex: 1;
+  padding: 20px;
+  min-width: 250px;
+}
+
+.image-section img {
+  max-width: 80%;
+  height: auto;
+  border-radius: 250px;
+}
+
+.image-section {
+  max-width: 30%;
+}
+
+.resume-button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
+
+.resume-button {
+  background-color: rgb(23, 17, 34); /* Button color */
+  border-color: #4b7bb7; /* Border color */
+  color: white; /* Text color */
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  height: 50px;
+  box-shadow: 0px 10px 0px rgb(53, 48, 63);
+  margin-right: 10px;
+}
+
+.resume-button:hover {
+  background-color: rgb(36, 27, 53) !important; /* Darker shade on hover */
+  border-color: #3867a3;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+  .row {
+    flex-direction: column;
+    margin: 20px 10px;
+  }
+
+  .image-section,
+  .text-section,
+  .profile-section,
+  .skills-section {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .resume-button {
+    font-size: 14px;
+    padding: 8px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
+.about-layout .abtme-text {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "poppins-bold", sans-serif;
+  color: rgb(177, 178, 179);
+  font-size: 28px;
+  font-weight: 1000;
+}
+
+.text-section .ant-typography,
+.text-section .ant-typography p {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: #beb1b1;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.profile-section {
+  color: white;
+  max-width: 30%;
+}
+
+.profile-section .ant-typography,
+.profile-section .ant-typography p {
+  color: whitesmoke;
+}
+
+.skills-section ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.skill-item {
+  margin-bottom: 20px;
+}
+
+.skill-name {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.skill-bar {
+  width: 70%;
+  height: 10px;
+  background-color: #ddd;
+}
+
+.skill-level {
+  height: 100%;
+  background-color: #010b10;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.skill-percent-right {
+  color: whitesmoke;
+  font-weight: 400;
+  padding-right: 5px;
+}
+
+.skills-section {
+  color: white;
+}
+
+.skills-section .ant-typography,
+.skills-section .ant-typography p {
+  color: whitesmoke;
+}
+
+.technology-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: flex-start;
+  margin: 20px 0;
+}
+
+.tech-section {
+  background-color: rgb(23, 17, 34);
+  border-radius: 10px;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(133, 76, 230);
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.half-width {
+  width: 40%; /* Half width for backend and frontend */
+}
+
+.full-width {
+  width: 40%; /* Full width for cloud skills */
+}
+
+.tech-skills {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.skill-box {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: transparent;
+  border: 1px solid rgb(173, 172, 171);
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin-right: 5px; /* Additional space between skill boxes */
+  position: relative;
+  transition: transform 0.2s;
+}
+
+.skill-box:hover {
+  transform: translateY(
+    -5px
+  ); /* Move the skill box 5 pixels up when hovered over */
+}
+
+.skill-name {
+  font-size: 14px;
+}
+
+.skill-image {
+  width: 30px; /* Adjust the size as needed */
+  height: auto;
+  margin-right: 5px;
+}
+
+.centered-title {
+  text-align: center;
+}
+
+.back-front-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px 150px;
+}
+.technology-container .tech-section .ant-typography {
+  color: rgb(177, 178, 179);
+  font-size: 28px;
+  padding-bottom: 10px;
+}
+
+.technology-container .ant-typography {
+  color: rgb(177, 178, 179);
+  padding: 2%;
+}
+
+.line-breaker {
+  background-color: #222; /* Dark background color */
+  height: 2px; /* Height of the line */
+  width: 60%; /* Width extending 60% of the screen */
+  margin: 20px auto; /* Center the line horizontally and add spacing */
+}
+
+@media (max-width: 768px) {
+  .tech-section {
+    width: 100%; /* Full width on smaller screens */
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .row {
+    flex-direction: column;
+  }
+
+  .image-section,
+  .text-section {
+    width: 100%;
+  }
+
+  .image-section img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .resume-button {
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+}
+
+/* Additional styling for other elements */

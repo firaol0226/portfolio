@@ -1,0 +1,252 @@
+.welcome-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; /* Full viewport height */
+  background-image: url("../../img/bgrnd.gif");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  backdrop-filter: blur(5px);
+}
+.welcome-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.75); /* Dark overlay with 50% opacity */
+  z-index: 1;
+}
+
+/* Style your content to be above the overlay */
+.welcome-container > * {
+  position: relative;
+  z-index: 2;
+}
+
+.welcome-content {
+  text-align: center; /* Center all text */
+}
+
+.welcome-content h1,
+.welcome-content h2,
+.welcome-content p {
+  margin: 0;
+  padding: 5px; /* Spacing between lines */
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.welcome-content h1 {
+  font-size: 80px;
+  font-family: "poppins-bold", sans-serif;
+  color: #2193b0;
+  /* background: linear-gradient(
+    45deg,
+    #6d6d6e,
+    #e0d8d8
+  ); /* Example gradient colors */
+  /* -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent; Makes the text transparent, showing the gradient */
+
+  /* -webkit-text-fill-color: transparent; For older versions of Safari */
+}
+
+.welcome-content h2 {
+  font-size: 30px;
+  color: #f5f0f0; /* Slightly adjusted color for elegance */
+  font-family: "Georgia", Times, serif; /* Switch to Georgia for a smoother look */
+  font-weight: bold; /* Use 'bold' for better browser compatibility */
+  letter-spacing: 0.5px; /* Slight spacing for a refined look */
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  margin-bottom: 10px; /* Spacing below the heading */
+}
+
+.welcome-content p {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.blue-text {
+  font-size: 50px;
+  font-weight: 1000;
+  /* background: linear-gradient(
+    45deg,
+    #007bff,
+    #54a0ff
+  ); /* Shining blue gradient */
+  /*-webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  -webkit-text-fill-color: transparent; */ /* For older versions of Safari */
+  color: rgb(133, 76, 230);
+}
+
+.more-about-me {
+  margin-top: 100px;
+  font-size: 1.5rem;
+  font-weight: bold; /* Make the font bolder */
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px; /* Space between text and icon */
+  padding: 10px 15px;
+  border-radius: 5px;
+  background: linear-gradient(
+    45deg,
+    #6dd5ed,
+    #051c22
+  ); /* Gradient background */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+  text-transform: uppercase; /* Capitalize all letters */
+  letter-spacing: 1px; /* Increase spacing between letters */
+}
+
+.more-about-me:hover {
+  background: linear-gradient(
+    45deg,
+    #2193b0,
+    #6dd5ed
+  ); /* Change gradient direction on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Slightly larger shadow on hover */
+  transform: translateY(-2px); /* Slight lift effect on hover */
+}
+
+/* Styling for the icon */
+.more-about-me .anticon {
+  font-size: 20px; /* Increase icon size */
+  vertical-align: middle; /* Align icon vertically with text */
+}
+
+/*background*/
+/* .animated-background { */
+/* width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to right,
+    #0f1018,
+    #101316,
+    #101316 */
+/* ); Dark gradient */
+/* overflow: hidden;
+  position: relative; */
+/* } */
+
+/* .shooting-star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 0 60px white;
+  animation: shootingStar 2s ease-in-out infinite; */
+/* } */
+
+@keyframes shootingStar {
+  0% {
+    transform: translateX(0) translateY(0);
+    opacity: 1;
+    width: 5px;
+    height: 5px;
+  }
+  100% {
+    transform: translateX(300px) translateY(-300px);
+    opacity: 0;
+    width: 100px;
+    height: 100px;
+  }
+}
+
+/*background*/
+
+/* Responsive font sizes for smaller screens */
+@media screen and (max-width: 768px) {
+  .welcome-content h1 {
+    font-size: 2rem;
+  }
+
+  .welcome-content p {
+    font-size: 1rem;
+  }
+
+  .devfolio-heading {
+    left: 10%; /* Give more space from the left on smaller screens */
+    font-size: 24px; /* Slightly smaller font size on smaller screens */
+    transform: translateX(-5%);
+  }
+  .blue-text {
+    font-size: 40px; /* Slightly smaller font size for medium screens */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .blue-text {
+    font-size: 30px; /* Slightly smaller font size for medium screens */
+  }
+}
+.animated-background {
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(
+    to right #004e92 30%,
+    #222a35 70%
+  ); /* Dark gradient */
+  overflow: hidden;
+  position: relative;
+}
+
+.bubble {
+  position: absolute;
+  bottom: -150px;
+  background-color: rgba(255, 255, 255, 0.6);
+  border-radius: 50%;
+  opacity: 0;
+  animation: floatBubble 20s linear infinite;
+  animation-delay: calc(-5s * var(--size));
+}
+
+.bubble::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: var(--size);
+  height: var(--size);
+  background-color: inherit;
+  border-radius: inherit;
+  transform: translate(-50%, -50%);
+}
+
+@keyframes floatBubble {
+  0% {
+    bottom: -150px;
+    opacity: 0.6;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    bottom: 100vh;
+    opacity: 0;
+  }
+}
+
+.devfolio-heading {
+  position: fixed;
+  top: 25px; /* Adjust as needed */
+  left: 10%;
+  transform: translateX(-10%);
+  font-size: 30px; /* Adjust as needed */
+  font-family: "Times New Roman", sans-serif; /* Choose a font that fits your design */
+  color: white; /* Adjust color as needed */
+  z-index: 10; /* Ensure it stays above other content */
+  margin-left: 0%;
+}

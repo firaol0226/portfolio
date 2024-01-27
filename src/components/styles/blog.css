@@ -1,0 +1,129 @@
+/* Blog.css */
+
+/* Full-screen blog section */
+.blog-section {
+  background: #222a35;
+  padding: 20px 0; /* Add top and bottom padding */
+  text-align: left; /* Align content to the left */
+  min-height: 100vh; /* Make the section full-screen */
+  display: flex;
+  flex-direction: column; /* Stack content vertically */
+  justify-content: space-between; /* Space between content and line breaker */
+}
+
+.blog-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start; /* Start from top-left */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px; /* Add left and right padding */
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.blogs-text {
+  text-align: center;
+  color: whitesmoke !important;
+  padding-bottom: 5%;
+}
+
+.blog-item {
+  background: rgb(23, 17, 34);
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.2s;
+  flex: 1;
+  min-width: 420px; /* Minimum width for each blog item */
+  max-width: 450px; /* Maximum width for each blog item */
+  border: 1px solid rgb(133, 76, 230);
+}
+
+.blog-item:hover {
+  transform: translateY(-15px);
+}
+
+.blog-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.blog-title {
+  font-size: 24px;
+  margin-top: 10px;
+  color: rgb(177, 178, 179) !important;
+}
+
+.blog-description {
+  font-size: 16px;
+  color: #555;
+  margin-top: 10px;
+  justify-content: left;
+}
+
+.blog-item a {
+  text-decoration: none;
+  color: #333;
+}
+
+.blog-item a:hover {
+  color: #1890ff;
+}
+
+.line-breaker {
+  background-color: #3c3c3c; /* Dark background color */
+  height: 2px; /* Height of the line */
+  width: 60%; /* Width extending 60% of the screen */
+  margin: 20px auto 0; /* Center the line horizontally and add spacing */
+}
+
+/* Media query for screens smaller than 768px */
+@media (max-width: 768px) {
+  .blog-container {
+    flex-direction: column; /* Stack blog items vertically */
+    align-items: center;
+  }
+
+  .blog-item {
+    margin-bottom: 20px; /* Add spacing between blog items */
+    max-width: 100%; /* Adjust maximum width for smaller screens */
+    /* You can also consider adding padding here for better spacing on smaller screens */
+  }
+
+  .blog-title {
+    font-size: 20px; /* Reduce font size for mobile */
+  }
+
+  .blog-description {
+    font-size: 14px; /* Reduce font size for mobile */
+  }
+}
+
+/* Media query for screens smaller than 480px (mobile) */
+@media (max-width: 480px) {
+  .blog-container {
+    max-width: 100%; /* Adjust maximum width for smaller screens to make it full width */
+    margin-left: 0; /* Remove left margin for smaller screens */
+    margin-right: 0; /* Remove right margin for smaller screens */
+  }
+
+  .blog-item {
+    min-width: auto; /* Remove the minimum width for each blog item on mobile */
+    max-width: 100%; /* Adjust maximum width for each blog item to make them full width */
+    padding: 10px; /* Adjust padding for better spacing on mobile screens */
+  }
+
+  .blog-title {
+    font-size: 20px; /* Reduce font size for mobile */
+    margin-top: 5px; /* Reduce top margin for mobile */
+  }
+
+  .blog-description {
+    font-size: 14px; /* Reduce font size for mobile */
+    margin-top: 5px; /* Reduce top margin for mobile */
+  }
+}

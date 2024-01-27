@@ -1,0 +1,87 @@
+.blogBody-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  justify-content: center; /* Center vertically */
+  min-height: 100vh; /* Make the container full height of the viewport */
+  color: black;
+  margin-top: 20px;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.blogBody-title {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.blogBody {
+  background-color: #fff; /* White background for each blog */
+  border-radius: 5px;
+  box-shadow: 0px -5px 100px rgba(0, 0, 0, 0.1); /* Elevation effect */
+  margin-bottom: 20px;
+  margin-top: 20px;
+  padding: 20px; /* Limit the width of the blogs */
+  /* width: 100%; Make the blogs take full width within the container */
+  border-radius: 15px;
+  margin-left: 15%;
+  margin-right: 15%;
+}
+
+.blogBody-entry-title {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.blogBody-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 15px;
+}
+
+.blogBody-content {
+  font-size: 16px;
+  margin-top: 10px;
+}
+
+.blogBody-close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.blogBody-close-button img {
+  width: 30px; /* Adjust size as needed */
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  .blogBody {
+    margin-left: 2%; /* further reduced for smaller screens */
+    margin-right: 2%;
+  }
+
+  .blogBody-close-button {
+    top: 5px;
+    right: 5px;
+  }
+
+  .blogBody-close-button img {
+    width: 25px; /* slightly smaller for mobile */
+    height: 25px;
+  }
+
+  .blogBody-title,
+  .blogBody-entry-title {
+    font-size: 18px; /* smaller font size for mobile */
+  }
+
+  .blogBody-content {
+    font-size: 14px; /* smaller font size for mobile */
+  }
+}

@@ -1,0 +1,65 @@
+.navbar-container {
+  position: fixed; /* Keep navbar fixed */
+  top: 10px;
+  left: 10px;
+  z-index: 1000; /* Ensure it's above other content */
+}
+
+.menu-button {
+  color: whitesmoke;
+  background-color: transparent; /* Button background color */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Optional: for rounded corners */
+  padding: 15px; /* Increased button padding for larger size */
+  font-size: 20px; /* Larger font size for the icon */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px; /* Set a specific width */
+  height: 60px; /* Set a specific height */
+}
+
+/* Drawer styles */
+.ant-drawer-body {
+  /*background: #355c7d; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #c06c84 10%,
+    #6c5b7b 40%,
+    #355c7d 50%
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+
+    #6c5b7b,
+    #355c7d,
+    #222a35
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: rgb(23, 17, 34);
+  color: #ffffff;
+}
+
+.ant-drawer-title {
+  color: #e43f5a;
+}
+
+.ant-menu {
+  background: transparent;
+  border-right: none;
+}
+
+.ant-menu-item {
+  color: #e8e8e8; /* Lighter shade of white for better contrast */
+  font-size: 18px; /* Increased font size for better readability */
+  transition: background 0.3s, color 0.3s;
+  padding: 10px 20px; /* Existing padding for a larger clickable area */
+  border-radius: 5px; /* Existing rounded corners for a modern look */
+  margin: 5px 0; /* Existing spacing between menu items */
+}
+
+.ant-menu-item:hover {
+  background: #2a2b2b !important;
+  color: #ffffff !important; /* Bright white color on hover for contrast */
+  box-shadow: 0 2px 5px rgba(234, 234, 234, 0.2); /* Existing subtle shadow for a 3D effect */
+  transform: scale(1.05); /* Existing slight enlargement on hover */
+}
